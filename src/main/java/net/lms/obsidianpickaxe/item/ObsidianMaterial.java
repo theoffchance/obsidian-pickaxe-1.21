@@ -10,7 +10,7 @@ public class ObsidianMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 3000;
+        return 3500;
     }
 
     @Override
