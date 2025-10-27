@@ -3,6 +3,7 @@ package net.lms.obsidianpickaxe.item;
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
 public class ObsidianMaterial implements ToolMaterial {
@@ -24,7 +25,7 @@ public class ObsidianMaterial implements ToolMaterial {
 
     @Override
     public TagKey<Block> getInverseTag() {
-        return null;
+        return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
     }
 
     @Override
@@ -34,7 +35,7 @@ public class ObsidianMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.EMPTY;
     }
 
     public static final ObsidianMaterial INSTANCE = new ObsidianMaterial();
