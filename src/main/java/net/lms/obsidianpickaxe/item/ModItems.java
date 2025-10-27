@@ -12,7 +12,8 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item OBSIDIAN_PICKAXE = register(
             "obsidian_pickaxe",
-            new PickaxeItem(ObsidianMaterial.INSTANCE, new Item.Settings()));
+            new PickaxeItem(ObsidianMaterial.INSTANCE, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ObsidianMaterial.INSTANCE, 1, -2.8f))));
 
     private static Item register(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ObsidianPickaxe.MOD_ID, id), item);
