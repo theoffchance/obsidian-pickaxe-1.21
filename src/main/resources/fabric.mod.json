@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "obsidian-pickaxe",
+	"version": "${version}",
+	"name": "Obsidian Pickaxe",
+	"description": "Adds an upgrade to the Netherite Pickaxe, the obsidian Pickaxe.",
+	"authors": [
+		"lms"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/obsidian-pickaxe/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lms.obsidianpickaxe.ObsidianPickaxe"
+		],
+		"fabric-datagen": [
+			"net.lms.obsidianpickaxe.ObsidianPickaxeDataGenerator"
+		],
+		"client": [
+			"net.lms.obsidianpickaxe.ObsidianPickaxeClient"
+		]
+	},
+	"mixins": [
+		"obsidian-pickaxe.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
