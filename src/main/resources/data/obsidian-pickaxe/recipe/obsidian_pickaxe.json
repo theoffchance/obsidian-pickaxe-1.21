@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "GNG",
+    "GGG"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_pickaxe"
+    }
+  },
+  "result": {
+    "id": "obsidian-pickaxe:obsidian_pickaxe",
+    "count": 1
+  }
+}
