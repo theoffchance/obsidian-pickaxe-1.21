@@ -4,24 +4,25 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lms.obsidianpickaxe.ObsidianPickaxe;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item OBSIDIAN_PICKAXE = registerItem(
+    public static final Item OBSIDIAN_PICKAXE = register(
             "obsidian_pickaxe",
-            new Item(new Item.Settings()));
+            new PickaxeItem(ObsidianMaterial.INSTANCE, new Item.Settings()));
 
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(ObsidianPickaxe.MOD_ID, name), item);
+    private static Item register(String id, Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(ObsidianPickaxe.MOD_ID, id), item);
     }
 
-    public static void registerModItems() {
+    public static void initialize() {
         ObsidianPickaxe.LOGGER.info("Registering Mod Items for " + ObsidianPickaxe.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(OBSIDIAN_PICKAXE);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((itemGroup) -> {
+            itemGroup.add(OBSIDIAN_PICKAXE);
         });
     }
 }
