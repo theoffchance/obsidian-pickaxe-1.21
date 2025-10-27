@@ -2,6 +2,7 @@ package net.lms.obsidianpickaxe;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.lms.obsidianpickaxe.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,5 +16,6 @@ public class ObsidianPickaxe implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.registerModItems();
 	}
 }

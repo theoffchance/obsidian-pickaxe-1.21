@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "obsidian-pickaxe:item/obsidian_pickaxe"
+  }
+}
