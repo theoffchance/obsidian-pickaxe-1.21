@@ -10,7 +10,7 @@
 	"contact": {
 		"sources": "https://github.com/theoffchance/obsidian-pickaxe-1.21"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/obsidian-pickaxe/icon.png",
 	"environment": "*",
 	"entrypoints": {
