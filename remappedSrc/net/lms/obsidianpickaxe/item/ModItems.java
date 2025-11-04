@@ -8,13 +8,9 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
-
-import java.util.function.Function;
 
 public class ModItems {
     public static final ToolMaterial OBSIDIAN_TOOL_MATERIAL = new ToolMaterial(
@@ -28,22 +24,12 @@ public class ModItems {
 
     public static final Item OBSIDIAN_PICKAXE = register(
             "obsidian_pickaxe",
-            settings -> new PickaxeItem(OBSIDIAN_TOOL_MATERIAL, 1f, -2.8f, settings),
+            settings -> new PickaxeItem(OBSIDIAN_TOOL_MATERIAL, 1f, -2.8f, ),
             new Item.Settings()
     );
 
-
-    public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
-        // Create the item key.
-        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ObsidianPickaxe.MOD_ID, name));
-
-        // Create the item instance.
-        Item item = itemFactory.apply(settings.registryKey(itemKey));
-
-        // Register the item.
-        Registry.register(Registries.ITEM, itemKey, item);
-
-        return item;
+    private static Item register(String id, Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(ObsidianPickaxe.MOD_ID, id), item);
     }
 
     public static void initialize() {

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "multi_bench",
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "N": "minecraft:netherite_pickaxe",
+    "O": "minecraft:obsidian"
+  },
+  "pattern": [
+    "OOO",
+    "GNG",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "obsidian-pickaxe:obsidian_pickaxe"
+  }
+}
